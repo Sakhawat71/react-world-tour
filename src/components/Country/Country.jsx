@@ -2,15 +2,15 @@
 import { useState } from 'react';
 import './Country.css';
 
-const Country = ({ countrie }) => {
-    const { name, flags } = countrie;
+const Country = ({ countrie , hendelAddToVisited}) => {
+    const { name, flags} = countrie;
     const [visited,setVisited] = useState(false);
 
     const handelClick = () =>{
         setVisited(!visited);
     }
 
-    console.log(countrie)
+    // console.log(countrie)
     return (
         <div className={`country ${visited ? 'bg-cyan-200' : 'bg-white'}`}>
             <figure className='h-[160px] border '>
@@ -22,6 +22,7 @@ const Country = ({ countrie }) => {
                 <button onClick={handelClick} className='btn bg-green-500 '>Visited</button>
                 {visited ? ' I have visited the country.' : ' I want to visit this country.'}
             </div>
+            <button onClick={hendelAddToVisited} className='btn  normal-case'>Add to Visited</button>
         </div>
     );
 };
