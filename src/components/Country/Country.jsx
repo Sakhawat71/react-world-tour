@@ -17,7 +17,7 @@ const Country = ({ countrie }) => {
                 <img className='h-full w-full ' src={flags?.png} alt="" />
             </figure>
             <div className=' space-y-1 my-2'>
-                <h2 className='text-2xl font-bold '>{name?.common}</h2>
+                <h2 style={{color: visited && 'red'}} className='text-2xl font-bold '>{name?.common}</h2>
                 <p>{name?.official}</p>
                 <button onClick={handelClick} className='btn bg-green-500 '>Visited</button>
                 {visited ? ' I have visited the country.' : ' I want to visit this country.'}
