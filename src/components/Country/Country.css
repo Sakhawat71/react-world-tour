@@ -1,0 +1,10 @@
+.country {
+    width: 350px;
+    text-align: center;
+    border: 2px solid rgb(77, 148, 175);
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 5px 5px;
+
+}
