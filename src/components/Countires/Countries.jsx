@@ -36,7 +36,8 @@ const Countries = () => {
                     {
                         visitedCounties.map(country =>
                             <li key={country.cca3}>
-                                {country.name.common}</li>)
+                            {country.name.common}
+                            </li>)
                     }
                 </ul>
             </div>
@@ -44,7 +45,7 @@ const Countries = () => {
                 <h3>All visited Country Flags</h3>
                 <figure className='flex flex-wrap'>
                     {
-                        visitedCountryFlag.map(flag => <img className='w-[100px] h-[50px] m-2' key={flag} src={flag}></img>)
+                        visitedCountryFlag.map((flag, idx) => <img className='w-[100px] h-[50px] m-2' key={idx} src={flag}></img>)
                     }
                 </figure>
             </div>
@@ -56,7 +57,8 @@ const Countries = () => {
                             countrie={countrie}
                             hendelAddToVisited={hendelAddToVisited}
                             handelAddFlagForVisitedCountry={handelAddFlagForVisitedCountry}
-                        ></Country>)
+                        >
+                    </Country>)
                 }
             </div>
         </div>
