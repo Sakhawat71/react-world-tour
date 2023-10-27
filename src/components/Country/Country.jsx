@@ -2,8 +2,8 @@
 import { useState } from 'react';
 import './Country.css';
 
-const Country = ({ countrie , hendelAddToVisited}) => {
-    const { name, flags} = countrie;
+const Country = ({ countrie , hendelAddToVisited,handelAddFlagForVisitedCountry}) => {
+    const { name, flags , cca3} = countrie;
     const [visited,setVisited] = useState(false);
 
     const handelClick = () =>{
@@ -22,7 +22,8 @@ const Country = ({ countrie , hendelAddToVisited}) => {
                 <button onClick={handelClick} className='btn bg-green-500 '>Visited</button>
                 {visited ? ' I have visited the country.' : ' I want to visit this country.'}
             </div>
-            <button onClick={hendelAddToVisited} className='btn  normal-case'>Add to Visited</button>
+            <button onClick={() => hendelAddToVisited(countrie)} className='btn  normal-case'>Add to Visited</button>
+            <button onClick={()=> handelAddFlagForVisitedCountry(countrie.flags?.png)} className='btn normal-case'>Add country Flag</button>
         </div>
     );
 };
