@@ -36,7 +36,7 @@ const Countries = () => {
                     {
                         visitedCounties.map(country =>
                             <li key={country.cca3}>
-                            {country.name.common}
+                                {country.name.common}
                             </li>)
                     }
                 </ul>
@@ -58,7 +58,7 @@ const Countries = () => {
                             hendelAddToVisited={hendelAddToVisited}
                             handelAddFlagForVisitedCountry={handelAddFlagForVisitedCountry}
                         >
-                    </Country>)
+                        </Country>)
                 }
             </div>
         </div>
@@ -66,4 +66,3 @@ const Countries = () => {
 };
 
 export default Countries;
-
